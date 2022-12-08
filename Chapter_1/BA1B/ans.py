@@ -1,0 +1,43 @@
+from collections import Counter
+
+def Most_Freq_Kmer(text, k):
+    # arr = []
+    l = Counter([text[i:i+k] for i in range(len(text)-k+1)]).most_common()
+    ans = []
+    most = l[0][1]
+    for i in l:
+        if i[1] != most:
+            break
+        ans.append(i[0])
+    return ans
+
+text = 'ACGTTGCATGTCGCATGATGCATGAGAGCT'
+k = 4
+# text = 'GGGGTTCCATCTTTCTCCACCGGAGGCTTCTGCGGCTTCTGCCACCGGACACCGGATGTGTTATACACCGGAGGCTTCTGCTCTTTCTCTGTGTTATAGGGGTTCCACACCGGAGGCTTCTGCTGTGTTATAGGGGTTCCAGGCTTCTGCGGCTTCTGCGGCTTCTGCGGCTTCTGCTGTGTTATAGGCTTCTGCCACCGGATCTTTCTCTGTGTTATAGGCTTCTGCTGTGTTATACACCGGATCTTTCTCTGTGTTATAGGCTTCTGCGGGGTTCCAGGCTTCTGCGGGGTTCCACACCGGATCTTTCTCGGGGTTCCAGGCTTCTGCCACCGGACACCGGATGTGTTATACACCGGACACCGGAGGGGTTCCATGTGTTATATGTGTTATAGGGGTTCCAGGCTTCTGCTGTGTTATAGGGGTTCCACACCGGAGGCTTCTGCTCTTTCTCGGCTTCTGCTGTGTTATATCTTTCTCGGGGTTCCACACCGGACACCGGATCTTTCTCTGTGTTATAGGCTTCTGCTCTTTCTCGGGGTTCCAGGGGTTCCAGGCTTCTGCGGGGTTCCAGGGGTTCCATGTGTTATACACCGGATCTTTCTCGGCTTCTGCGGCTTCTGCGGGGTTCCATGTGTTATATGTGTTATATGTGTTATAGGGGTTCCAGGGGTTCCATGTGTTATACACCGGACACCGGATCTTTCTCGGCTTCTGCTCTTTCTCTGTGTTATAGGCTTCTGCGGCTTCTGCTCTTTCTCTCTTTCTCTCTTTCTCTCTTTCTCTGTGTTATATGTGTTATA'
+# k = 12
+print(' '.join(Most_Freq_Kmer(text, k)))
+
+#     for i in range(len(text)-k+1):
+#         o.append(text[i:i+k])
+# #     print(o)
+#     o = Counter(o).most_common()
+#     print(o)
+#     most = o[0][1]
+#     print(most)
+#     ans = []
+#     for i in o:
+#         if i[1] != most:
+#             break
+#         ans.append(i[0])
+#     print(ans)
+#     ans = []
+#     for i in range(l-k):
+#     most = l[0][1]
+#     ans = []
+#     for i in l:
+#         if i[1] != most:
+#             break
+#         ans.append(i[0])
+        
+    
+
