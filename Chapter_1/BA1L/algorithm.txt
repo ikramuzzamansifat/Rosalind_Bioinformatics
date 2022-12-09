@@ -1,0 +1,7 @@
+PATTERNTONUMBER(Pattern)
+  if Pattern contains no symbols
+    return 0
+  symbol LASTSYMBOL(Pattern)
+  Prefix PREFIX(Pattern)
+  
+  return 4 · PATTERNTONUMBER(Prefix) + SYMBOLTONUMBER(symbol)
