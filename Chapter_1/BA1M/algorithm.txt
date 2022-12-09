@@ -1,0 +1,10 @@
+NUMBERTOPATTERN(index , k)
+  if k = 1
+    return NUMBERTOSYMBOL(index)
+  prefixIndex QUOTIENT(index, 4)
+  r REMAINDER(index, 4)
+  symbol NUMBERTOSYMBOL(r)
+  
+  PrefixPattern NUMBERTOPATTERN(prefixIndex, k)
+ 
+ return concatenation of PrefixPattern with symbol
